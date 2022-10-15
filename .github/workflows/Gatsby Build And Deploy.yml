@@ -36,8 +36,8 @@ jobs:
           echo "build"
           gatsby build
 
-          echo "az storage blob upload-batch -s ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/www/public -d \$web --account-name citywidehvac"
-          az storage blob upload-batch -s ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/www/public -d \$web --account-name citywidehvac
+          echo "az storage blob upload-batch -s ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/www/public -d \$web --account-name citywidehvac --account-key myaccountkey --overwrite"
+          az storage blob upload-batch -s ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/www/public -d \$web --account-name citywidehvac --account-key ${{ secrets.AZURE_STORAGE_KEY }} --overwrite
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
