@@ -6,7 +6,6 @@ import ValueProp from "../components/ValueProp";
 import SocialProof from "../components/SocialProof";
 import ProductBenefits from "../components/ProductBenefits";
 import Testimonials from "../components/Testimonials";
-import CallToAction from "../components/CallToAction";
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +14,6 @@ const IndexPage = () => (
     <SocialProof />
     <ProductBenefits />
     <Testimonials />
-    <CallToAction />
   </Layout>
 );
 
